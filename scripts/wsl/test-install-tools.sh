@@ -73,7 +73,7 @@ test_npm_package() {
     TOTAL=$((TOTAL + 1))
     
     echo -n "Testing $name... "
-    if npm list -g "$package" &> /dev/null 2>&1; then
+    if npm list -g --depth=0 2>/dev/null | grep -q "$package"; then
         echo -e "${GREEN}✓ PASS${NC}"
         PASSED=$((PASSED + 1))
         return 0

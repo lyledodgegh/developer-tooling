@@ -484,6 +484,8 @@ install_apache_spark() {
     sudo apt-get install -y openjdk-11-jdk
     
     # Download and install Spark
+    # NOTE: Update these version numbers periodically to get the latest stable release
+    # Check https://spark.apache.org/downloads.html for the latest version
     SPARK_VERSION="3.5.0"
     HADOOP_VERSION="3"
     wget "https://dlcdn.apache.org/spark/spark-${SPARK_VERSION}/spark-${SPARK_VERSION}-bin-hadoop${HADOOP_VERSION}.tgz"
@@ -509,6 +511,8 @@ install_kafka() {
     sudo apt-get install -y openjdk-11-jdk
     
     # Download and install Kafka
+    # NOTE: Update these version numbers periodically to get the latest stable release
+    # Check https://kafka.apache.org/downloads for the latest version
     KAFKA_VERSION="3.6.1"
     SCALA_VERSION="2.13"
     wget "https://downloads.apache.org/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz"
@@ -693,7 +697,7 @@ update_all_tools() {
     
     print_info "Updating pip packages..."
     if command -v pip3 &> /dev/null; then
-        pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install --user -U
+        pip3 list --outdated --format=freeze | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install --user -U || true
     fi
     
     print_info "Cleaning up..."
