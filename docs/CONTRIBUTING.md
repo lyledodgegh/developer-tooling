@@ -124,7 +124,7 @@ When adding a new tool to the installation scripts:
    ```
 
 5. **Update documentation**
-   - Add the tool to the appropriate section in `/doc/README.md`
+   - Add the tool to the appropriate section in `/docs/README.md`
    - Document any special configuration needed
 
 ### Platform-Specific Considerations

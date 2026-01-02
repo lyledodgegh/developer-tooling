@@ -109,11 +109,11 @@ chmod +x scripts/wsl/test-install-tools.sh
 
 ## Documentation
 
-For more detailed information, see the [documentation](doc/README.md).
+For more detailed information, see the [documentation](docs/README.md).
 
 ## Contributing
 
-We welcome contributions! Please see [CONTRIBUTING.md](doc/CONTRIBUTING.md) for guidelines.
+We welcome contributions! Please see [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
 
 ## License
 
@@ -122,7 +122,7 @@ This project is licensed under the terms of the LICENSE file in the root directo
 ## Support
 
 If you encounter issues or have questions:
-1. Check the [documentation](doc/README.md)
+1. Check the [documentation](docs/README.md)
 2. Run the test script to identify specific problems
 3. Open an issue on GitHub with details about your environment and the error
 
